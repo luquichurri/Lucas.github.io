@@ -1,34 +1,272 @@
+Crea un nuevo index.html y pega TODO esto:
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi primera web</title>
-  <style>
-    body {
-      background: #111;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-      padding-top: 100px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lucas Castro | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    radial-gradient(circle at top left,#2563eb33,transparent 30%),
+    radial-gradient(circle at bottom right,#9333ea33,transparent 30%);
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    color:#cbd5e1;
+    max-width:700px;
+    line-height:1.6;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:15px 28px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.primary{
+    background:#3b82f6;
+    color:white;
+}
+
+.primary:hover{
+    transform:translateY(-4px);
+    background:#2563eb;
+}
+
+.secondary{
+    border:1px solid #475569;
+    color:white;
+}
+
+.secondary:hover{
+    background:#1e293b;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:20px;
+    padding:30px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#3b82f6;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+.cv-section{
+    text-align:center;
+}
+
+.cv-links{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#94a3b8;
+    border-top:1px solid #1e293b;
+}
+
+.glow{
+    color:#60a5fa;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
     }
 
-    h1 {
-      font-size: 50px;
+    .subtitle{
+        font-size:1rem;
     }
 
-    p {
-      color: #aaa;
-    }
+}
 
-    button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      background: orange;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
+</style>
 </head>
+
+<body>
+
+<header>
+
+<h1>Lucas <span class="glow">Castro</span></h1>
+
+<p class="subtitle">
+Portfolio personal, intereses, investigación y proyectos.
+Un espacio donde reúno mis aficiones, experiencia y trayectoria académica.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#aficiones">
+Ver aficiones
+</a>
+
+<a class="btn secondary" href="#cv">
+Currículum
+</a>
+
+</div>
+
+</header>
+
+<section id="aficiones">
+
+<h2 class="section-title">Aficiones</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📚 Aprendizaje</h3>
+<p>
+Interés por la investigación, la ciencia y el desarrollo continuo de conocimientos.
+</p>
+</div>
+
+<div class="card">
+<h3>💻 Tecnología</h3>
+<p>
+Curiosidad por la programación, herramientas digitales e inteligencia artificial.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 Creatividad</h3>
+<p>
+Exploración de proyectos interactivos, diseño web y experiencias digitales modernas.
+</p>
+</div>
+
+<div class="card">
+<h3>🌍 Exploración</h3>
+<p>
+Interés por nuevas ideas, culturas y formas de conectar tecnología y sociedad.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="cv" class="cv-section">
+
+<h2 class="section-title">Currículum & Perfil Académico</h2>
+
+<p style="color:#cbd5e1; max-width:700px; margin:auto; line-height:1.7;">
+Consulta mi experiencia académica, trayectoria profesional y publicaciones.
+</p>
+
+<div class="cv-links">
+
+<a class="btn primary"
+href="https://www.dropbox.com/scl/fi/l2p9weqzydunhdgm7h87t/CV-Lucas-resumen.pdf?rlkey=k8xwbleju4xt9xpoftht9iekz&e=1&dl=0"
+target="_blank">
+📄 Descargar CV
+</a>
+
+<a class="btn secondary"
+href="https://cvn.fecyt.es/0000-0001-9489-4698"
+target="_blank">
+🔬 Perfil FECYT
+</a>
+
+<a class="btn secondary"
+href="https://sites.google.com/view/lucas-castro/aficiones"
+target="_blank">
+🎯 Más aficiones
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Lucas Castro · Web personal creada con GitHub Pages
+</p>
+
+</footer>
+
+</body>
+</html>
 
 <body>
 
