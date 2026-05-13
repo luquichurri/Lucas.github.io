@@ -145,6 +145,62 @@ footer{
     color:#60a5fa;
 }
 
+.carousel-container {
+    position: relative;
+    width: 420px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-viewport {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+/* Flechas */
+.arrow {
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background: #3b82f6;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    margin-left: 10px;
+}
+    
 @media(max-width:768px){
 
     h1{
@@ -295,6 +351,23 @@ target="_blank">
 
 </footer>
 
+<script>
+let index = 0;
+
+function move(dir) {
+    const track = document.getElementById("track");
+    const total = track.children.length;
+
+    index += dir;
+
+    if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
+
+    track.style.transform = `translateX(${-index * 400}px)`;
+}
+</script>
+
+    
 </body>
 </html>
 
